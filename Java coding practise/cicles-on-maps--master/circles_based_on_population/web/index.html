@@ -1,0 +1,282 @@
+<!DOCTYPE html>    
+<html>    
+  <head>  <!-- www.techstrikers.com -->
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">    
+    <meta charset="utf-8">    
+    <title>Infowindow on Circle Click on Google Map</title>    
+    <style>    
+      html, body {    
+        height: 100%;    
+        margin: 0;    
+        padding: 0;    
+      }    
+      #map {    
+        height: 99%;  
+        width:99%  
+      }    
+    </style>    
+        <script async defer    
+        src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap"></script>    
+        <script> 
+ var contents = '<div id="content">'+    
+  '<div id="siteNotice">'+    
+  '</div>'+    
+  '<h1 id="firstHeading" class="firstHeading">Infowindow</h1>'+    
+  '</div>';    
+          
+// First, create an object containing LatLng and population for each city.    
+var citymap = {lat:21.002471054356725, lng:79.12353515625};  
+    
+function initMap() {    
+  var lat_lng = {lat: 22.08672, lng: 79.42444};
+	var var1 = 12442373;
+	var var2 = 11034555;
+	var var3 = 8443675;
+	var var4 = 6993262;
+	var var5 = 5577940;
+	var var6 = 4646732;
+	var var7 = 4496694;
+	var var8 = 4467797;
+	var var9 = 3124458;
+	var var10 = 3046163;
+  var map = new google.maps.Map(document.getElementById('map'), {    
+    zoom: 6,    
+    center: lat_lng,    
+    mapTypeId: google.maps.MapTypeId.TERRAIN    
+  });    
+  var infowindow = new google.maps.InfoWindow({    
+    content: "MUMBAI--"+var1   
+  });
+
+    // Add the circle for this city to the map.    
+    var cityCircle = new google.maps.Circle({    
+      strokeColor: '#FF0000',    
+      strokeOpacity: 0.8,    
+      strokeWeight: 2,    
+      fillColor: '#FF0000',    
+      fillOpacity: 0.35,    
+      map: map,    
+      center: new google.maps.LatLng(19.0760, 72.8777),    
+      radius: var1 /100,  
+      draggable:false  
+    });
+    
+    google.maps.event.addListener(cityCircle, 'click', function(ev){
+    infowindow.setPosition(cityCircle.getCenter());
+    infowindow.open(map);
+});
+
+
+
+var infowindow2 = new google.maps.InfoWindow({    
+    content: "DELHI"+var2 
+  });
+
+    // Add the circle for this city to the map.    
+    var cityCircle2 = new google.maps.Circle({    
+      strokeColor: '#FF0000',    
+      strokeOpacity: 0.8,    
+      strokeWeight: 2,    
+      fillColor: '#FF0000',    
+      fillOpacity: 0.35,    
+      map: map,    
+      center: new google.maps.LatLng(28.7041, 77.1025),    
+      radius: var2 /100,  
+      draggable:false  
+    });
+    
+    google.maps.event.addListener(cityCircle2, 'click', function(ev){
+    infowindow2.setPosition(cityCircle2.getCenter());
+    infowindow2.open(map);
+});
+
+
+var infowindow3 = new google.maps.InfoWindow({    
+    content: "BANGALORE"+var3//console.log("4")   
+  });
+
+    // Add the circle for this city to the map.    
+    var cityCircle3 = new google.maps.Circle({    
+      strokeColor: '#FF0000',    
+      strokeOpacity: 0.8,    
+      strokeWeight: 2,    
+      fillColor: '#FF0000',    
+      fillOpacity: 0.35,    
+      map: map,    
+      center: new google.maps.LatLng(12.9716, 77.5946),    
+      radius: var3 /100,  
+      draggable:false  
+    });
+    
+    google.maps.event.addListener(cityCircle3, 'click', function(ev){
+    infowindow3.setPosition(cityCircle3.getCenter());
+    infowindow3.open(map);
+});
+
+
+var infowindow4 = new google.maps.InfoWindow({    
+    content: "Hyderabad"+var4//console.log("4")   
+  });
+
+    // Add the circle for this city to the map.    
+    var cityCircle4 = new google.maps.Circle({    
+      strokeColor: '#FF0000',    
+      strokeOpacity: 0.8,    
+      strokeWeight: 2,    
+      fillColor: '#FF0000',    
+      fillOpacity: 0.35,    
+      map: map,    
+      center: new google.maps.LatLng(17.3850, 78.4867),    
+      radius: var4 /100,  
+      draggable:false  
+    });
+    
+    google.maps.event.addListener(cityCircle4, 'click', function(ev){
+    infowindow4.setPosition(cityCircle4.getCenter());
+    infowindow4.open(map);
+});
+
+
+var infowindow5 = new google.maps.InfoWindow({    
+    content: "AHEMADANBAD--"+var5//console.log("4")   
+  });
+
+    // Add the circle for this city to the map.    
+    var cityCircle5 = new google.maps.Circle({    
+      strokeColor: '#FF0000',    
+      strokeOpacity: 0.8,    
+      strokeWeight: 2,    
+      fillColor: '#FF0000',    
+      fillOpacity: 0.35,    
+      map: map,    
+      center: new google.maps.LatLng(23.0225, 72.5714),    
+      radius: var5 /100,  
+      draggable:false  
+    });
+    
+    google.maps.event.addListener(cityCircle5, 'click', function(ev){
+    infowindow5.setPosition(cityCircle5.getCenter());
+    infowindow5.open(map);
+});
+
+
+var infowindow6 = new google.maps.InfoWindow({    
+    content: "CHENNAI"+var6//console.log("4")   
+  });
+
+    // Add the circle for this city to the map.    
+    var cityCircle6 = new google.maps.Circle({    
+      strokeColor: '#FF0000',    
+      strokeOpacity: 0.8,    
+      strokeWeight: 2,    
+      fillColor: '#FF0000',    
+      fillOpacity: 0.35,    
+      map: map,    
+      center: new google.maps.LatLng(13.0827, 80.2707),    
+      radius: var6 /100,  
+      draggable:false  
+    });
+    
+    google.maps.event.addListener(cityCircle6, 'click', function(ev){
+    infowindow6.setPosition(cityCircle6.getCenter());
+    infowindow6.open(map);
+});
+
+
+var infowindow7 = new google.maps.InfoWindow({    
+    content: "KOLKATA--"+var7//console.log("4")   
+  });
+
+    // Add the circle for this city to the map.    
+    var cityCircle7 = new google.maps.Circle({    
+      strokeColor: '#FF0000',    
+      strokeOpacity: 0.8,    
+      strokeWeight: 2,    
+      fillColor: '#FF0000',    
+      fillOpacity: 0.35,    
+      map: map,    
+      center: new google.maps.LatLng(22.5726, 88.3639),    
+      radius: var7 /100,  
+      draggable:false  
+    });
+    
+    google.maps.event.addListener(cityCircle7, 'click', function(ev){
+    infowindow7.setPosition(cityCircle7.getCenter());
+    infowindow7.open(map);
+});
+
+
+var infowindow8 = new google.maps.InfoWindow({    
+    content: "SURAT"+var8//console.log("4")   
+  });
+
+    // Add the circle for this city to the map.    
+    var cityCircle8 = new google.maps.Circle({    
+      strokeColor: '#FF0000',    
+      strokeOpacity: 0.8,    
+      strokeWeight: 2,    
+      fillColor: '#FF0000',    
+      fillOpacity: 0.35,    
+      map: map,    
+      center: new google.maps.LatLng(21.1702, 72.8311),    
+      radius: var8 /100,  
+      draggable:false  
+    });
+    
+    google.maps.event.addListener(cityCircle8, 'click', function(ev){
+    infowindow8.setPosition(cityCircle8.getCenter());
+    infowindow8.open(map);
+});
+
+
+var infowindow9 = new google.maps.InfoWindow({    
+    content: "PUNE--"+var9//console.log("4")   
+  });
+
+    // Add the circle for this city to the map.    
+    var cityCircle9 = new google.maps.Circle({    
+      strokeColor: '#FF0000',    
+      strokeOpacity: 0.8,    
+      strokeWeight: 2,    
+      fillColor: '#FF0000',    
+      fillOpacity: 0.35,    
+      map: map,    
+      center: new google.maps.LatLng(18.5204, 73.8567),    
+      radius: var9 /100,  
+      draggable:false  
+    });
+    
+    google.maps.event.addListener(cityCircle9, 'click', function(ev){
+    infowindow9.setPosition(cityCircle9.getCenter());
+    infowindow9.open(map);
+});
+
+
+var infowindow10 = new google.maps.InfoWindow({    
+    content: "JAIPUR"+var10//console.log("4")   
+  });
+
+    // Add the circle for this city to the map.    
+    var cityCircle10 = new google.maps.Circle({    
+      strokeColor: '#FF0000',    
+      strokeOpacity: 0.8,    
+      strokeWeight: 2,    
+      fillColor: '#FF0000',    
+      fillOpacity: 0.35,    
+      map: map,    
+      center: new google.maps.LatLng(26.9124, 75.7873),    
+      radius: var10 /100,  
+      draggable:false  
+    });
+    
+    google.maps.event.addListener(cityCircle10, 'click', function(ev){
+    infowindow10.setPosition(cityCircle10.getCenter());
+    infowindow10.open(map);
+});
+}    
+    </script>    
+  </head>    
+  <body>    
+    <div id="map"></div>    
+  </body>    
+</html>
